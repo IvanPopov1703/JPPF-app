@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="lib-src">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib-src/jppf-client-src-6.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib-src/jppf-jmxremote-nio-src-6.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib-src/jppf-common-src-6.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

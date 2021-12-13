@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/JPPF-6.2-application-template.iml" filepath="$PROJECT_DIR$/JPPF-6.2-application-template.iml" />
+    </modules>
+  </component>
+</project>

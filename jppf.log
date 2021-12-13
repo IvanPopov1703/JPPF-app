@@ -1,0 +1,16 @@
+2021-12-14 00:15:50,158 [INFO ][org.jppf.utils.FileUtils.initJPPFTempDir(482)]: JPPF temp folder C:\Users\Ivan\AppData\Local\Temp\.jppf
+2021-12-14 00:15:50,471 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(78)]: --------------------------------------------------------------------------------
+2021-12-14 00:15:50,471 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(79)]: JPPF Version: 6.2, Build number: 2613, Build date: 2020-02-08 09:42 CET
+2021-12-14 00:15:50,471 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(80)]: starting client with PID=13796, UUID=0E2BF59F-60E0-48B0-B3C9-A2D82E03417B
+2021-12-14 00:15:50,471 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(81)]: --------------------------------------------------------------------------------
+2021-12-14 00:15:50,476 [INFO ][org.jppf.persistence.DatasourceInitializerImpl.init(128)]: HikariCP libraries are not in the classpath, no datasource will be defined
+2021-12-14 00:15:50,478 [INFO ][org.jppf.client.AbstractGenericClient.init(138)]: created client-side datasources: []
+2021-12-14 00:15:50,489 [INFO ][org.jppf.load.balancer.persistence.LoadBalancerPersistenceManager.<init>(62)]: load-balancer persistence is not configured
+2021-12-14 00:16:03,821 [INFO ][org.jppf.client.AbstractGenericClient.newConnection(246)]: connection [jppf_discovery-1-1] created
+2021-12-14 00:16:08,089 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-1 - ClassServer] Attempting connection to the class server at DESKTOP-QMJ16PQ:11111
+2021-12-14 00:16:08,101 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-1 - ClassServer] Reconnected to the class server
+2021-12-14 00:16:08,116 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-1 - TasksServer] Attempting connection to the task server at DESKTOP-QMJ16PQ:11111
+2021-12-14 00:16:08,138 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-1 - TasksServer] Reconnected to the JPPF task server
+2021-12-14 00:16:08,163 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing JMXNioServer(JMXRemote-1)
+2021-12-14 00:16:08,210 [INFO ][org.jppf.client.JPPFClient.close(372)]: closing org.jppf.client.JPPFClient@38c5cc4c
+2021-12-14 00:16:08,210 [INFO ][org.jppf.client.AbstractGenericClient.close(286)]: closing JPPF client with uuid=0E2BF59F-60E0-48B0-B3C9-A2D82E03417B, PID=13796
