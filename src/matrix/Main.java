@@ -23,15 +23,5 @@ public class Main {
         Integer[][] matr = new Integer[][] {{2, 3, 8}, {4, 1, 5}, {7, 3, 2}};
         Integer[] vec = new Integer[]{3, 7, 2};
         Matrix mt = new Matrix(matr);
-
-        Integer[] res = mult(mt, vec, mt.getRowCount(), mt.getColCount());
-        System.out.println(Arrays.toString(res));
-
-
-     /*   m1.printMatrix();
-        m2.printMatrix();
-        System.out.println();
-        Integer[][] result = Matrix.multiplyMatrices(m1.getMatr(), m2.getMatr());
-        System.out.println(Arrays.deepToString(result));*/
     }
 }
