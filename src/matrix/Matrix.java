@@ -64,11 +64,21 @@ public class Matrix implements Serializable {
      * @param indexCol номер столбца
      * @return если индексы заданы правильно - true, иначе false
      */
-    private boolean checkIndex(Integer indexRow, Integer indexCol) {
+    /*private boolean checkIndex(Integer indexRow, Integer indexCol) {
         return (
                 (indexRow < 0 || indexRow > rowCount - 1)
                         || (indexCol < 0 || indexCol > colCount - 1)
         );
+    }*/
+
+    private boolean checkIndex(Integer indexRow, Integer indexCol) {
+        boolean ok = (indexRow >= 0 && indexRow < rowCount);
+        if (ok) {
+            ok = (indexCol >= 0 && indexCol < colCount);
+        }
+        ok = (indexRow >= 0 && indexRow < rowCount) && (indexCol >= 0 && indexCol < colCount);
+
+        return ok;
     }
 
     /**
@@ -81,7 +91,7 @@ public class Matrix implements Serializable {
      */
     public Integer getElem(Integer indexRow, Integer indexCol) throws NullPointerException {
         if (!checkIndex(indexRow, indexCol)) {
-            throw new NullPointerException("Выход за границы матрицы");
+            throw new NullPointerException("Out of matrix boundaries");
         }
         return matr[indexRow][indexCol];
     }
@@ -96,7 +106,7 @@ public class Matrix implements Serializable {
      */
     public void setElem(Integer indexRow, Integer indexCol, Integer value) throws NullPointerException {
         if (!checkIndex(indexRow, indexCol)) {
-            throw new NullPointerException("Выход за границы матрицы");
+            throw new NullPointerException("Out of matrix boundaries");
         }
         matr[indexRow][indexCol] = value;
     }
@@ -137,7 +147,7 @@ public class Matrix implements Serializable {
      */
     public Integer[] getColumnByIndex(Integer columnIndex) throws NullPointerException {
         if (columnIndex < 0 || columnIndex >= colCount) {
-            throw new NullPointerException("Выход за границы матрицы");
+            throw new NullPointerException("Out of matrix boundaries");
         }
         Integer[] resultCol = new Integer[this.colCount];
         for (int i = 0; i < this.rowCount; i++) {

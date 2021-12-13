@@ -1,16 +1,544 @@
-2021-12-14 00:15:50,158 [INFO ][org.jppf.utils.FileUtils.initJPPFTempDir(482)]: JPPF temp folder C:\Users\Ivan\AppData\Local\Temp\.jppf
-2021-12-14 00:15:50,471 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(78)]: --------------------------------------------------------------------------------
-2021-12-14 00:15:50,471 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(79)]: JPPF Version: 6.2, Build number: 2613, Build date: 2020-02-08 09:42 CET
-2021-12-14 00:15:50,471 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(80)]: starting client with PID=13796, UUID=0E2BF59F-60E0-48B0-B3C9-A2D82E03417B
-2021-12-14 00:15:50,471 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(81)]: --------------------------------------------------------------------------------
-2021-12-14 00:15:50,476 [INFO ][org.jppf.persistence.DatasourceInitializerImpl.init(128)]: HikariCP libraries are not in the classpath, no datasource will be defined
-2021-12-14 00:15:50,478 [INFO ][org.jppf.client.AbstractGenericClient.init(138)]: created client-side datasources: []
-2021-12-14 00:15:50,489 [INFO ][org.jppf.load.balancer.persistence.LoadBalancerPersistenceManager.<init>(62)]: load-balancer persistence is not configured
-2021-12-14 00:16:03,821 [INFO ][org.jppf.client.AbstractGenericClient.newConnection(246)]: connection [jppf_discovery-1-1] created
-2021-12-14 00:16:08,089 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-1 - ClassServer] Attempting connection to the class server at DESKTOP-QMJ16PQ:11111
-2021-12-14 00:16:08,101 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-1 - ClassServer] Reconnected to the class server
-2021-12-14 00:16:08,116 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-1 - TasksServer] Attempting connection to the task server at DESKTOP-QMJ16PQ:11111
-2021-12-14 00:16:08,138 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-1 - TasksServer] Reconnected to the JPPF task server
-2021-12-14 00:16:08,163 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing JMXNioServer(JMXRemote-1)
-2021-12-14 00:16:08,210 [INFO ][org.jppf.client.JPPFClient.close(372)]: closing org.jppf.client.JPPFClient@38c5cc4c
-2021-12-14 00:16:08,210 [INFO ][org.jppf.client.AbstractGenericClient.close(286)]: closing JPPF client with uuid=0E2BF59F-60E0-48B0-B3C9-A2D82E03417B, PID=13796
+2021-12-14 21:12:34,445 [INFO ][org.jppf.utils.FileUtils.initJPPFTempDir(482)]: JPPF temp folder C:\Users\Ivan\AppData\Local\Temp\.jppf
+2021-12-14 21:12:34,746 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(78)]: --------------------------------------------------------------------------------
+2021-12-14 21:12:34,746 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(79)]: JPPF Version: 6.2, Build number: 2613, Build date: 2020-02-08 09:42 CET
+2021-12-14 21:12:34,746 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(80)]: starting client with PID=9848, UUID=FD5D4393-D9EE-495D-A1AE-064D62FDA220
+2021-12-14 21:12:34,746 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(81)]: --------------------------------------------------------------------------------
+2021-12-14 21:12:34,761 [INFO ][org.jppf.persistence.DatasourceInitializerImpl.init(128)]: HikariCP libraries are not in the classpath, no datasource will be defined
+2021-12-14 21:12:34,761 [INFO ][org.jppf.client.AbstractGenericClient.init(138)]: created client-side datasources: []
+2021-12-14 21:12:34,761 [INFO ][org.jppf.load.balancer.persistence.LoadBalancerPersistenceManager.<init>(62)]: load-balancer persistence is not configured
+2021-12-14 21:12:41,298 [INFO ][org.jppf.client.AbstractGenericClient.newConnection(246)]: connection [jppf_discovery-1-1] created
+2021-12-14 21:12:45,539 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-1 - ClassServer] Attempting connection to the class server at DESKTOP-QMJ16PQ:11111
+2021-12-14 21:12:45,539 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-1 - ClassServer] Reconnected to the class server
+2021-12-14 21:12:45,640 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-1 - TasksServer] Attempting connection to the task server at DESKTOP-QMJ16PQ:11111
+2021-12-14 21:12:45,724 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-1 - TasksServer] Reconnected to the JPPF task server
+2021-12-14 21:12:45,756 [INFO ][org.jppf.nio.NioServer.<init>(136)]: initializing JMXNioServer(JMXRemote-1)
+2021-12-14 21:12:45,963 [INFO ][org.jppf.nio.NioConstants.getCheckConnection(85)]: NIO checks are enabled
+2021-12-14 21:15:23,910 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised while handling job ClientTaskBundle[bundleId=1, name=Non Blocking Job, jobUuid=F484A863-D630-4023-AD02-0E5F91A6381D, initialTaskCount=1000, taskCount=1000, requeue=false, cancelled=false] on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=1, jobCount=1, resetting=false, bundlerAlgorithm=manual, channel=jppf_discovery-1-1[DESKTOP-QMJ16PQ:11111] (id=1) : ACTIVE (JPPFClientConnectionImpl@6f5e70bb)]
+java.lang.OutOfMemoryError: Java heap space
+2021-12-14 21:15:23,925 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-1 - ClassServer] Attempting connection to the class server at DESKTOP-QMJ16PQ:11111
+2021-12-14 21:15:23,925 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-1 - ClassServer] Reconnected to the class server
+2021-12-14 21:15:23,925 [WARN ][org.jppf.client.ClassServerDelegateImpl.run(97)]: [jppf_discovery-1-1 - ClassServer] caught java.net.SocketException: Socket closed, will re-initialise ...
+2021-12-14 21:15:23,941 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=0, jobCount=0, resetting=false, bundlerAlgorithm=manual, channel=jppf_discovery-1-1[DESKTOP-QMJ16PQ:11111] (id=1) : DISCONNECTED (JPPFClientConnectionImpl@6f5e70bb)]
+java.io.EOFException: could only read 0 bytes out of 4
+	at org.jppf.serialization.SerializationUtils.readToBuf(SerializationUtils.java:453)
+	at org.jppf.serialization.SerializationUtils.readInt(SerializationUtils.java:257)
+	at org.jppf.comm.socket.AbstractSocketWrapper.readInt(AbstractSocketWrapper.java:241)
+	at org.jppf.io.SocketWrapperInputSource.readInt(SocketWrapperInputSource.java:85)
+	at org.jppf.io.IOHelper.readData(IOHelper.java:105)
+	at org.jppf.io.IOHelper.unwrappedData(IOHelper.java:178)
+	at org.jppf.client.BaseJPPFClientConnection.receiveHeader(BaseJPPFClientConnection.java:269)
+	at org.jppf.client.JPPFClientConnectionImpl.receiveHeader(JPPFClientConnectionImpl.java:41)
+	at org.jppf.client.balancer.ChannelWrapperRemoteAsync$RemoteReceiver.run(ChannelWrapperRemoteAsync.java:203)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+2021-12-14 21:15:24,041 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-1 - TasksServer] Attempting connection to the task server at DESKTOP-QMJ16PQ:11111
+2021-12-14 21:15:24,141 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-1 - TasksServer] Reconnected to the JPPF task server
+2021-12-14 21:15:30,189 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised while handling job ClientTaskBundle[bundleId=2, name=Non Blocking Job, jobUuid=F484A863-D630-4023-AD02-0E5F91A6381D, initialTaskCount=1000, taskCount=1000, requeue=false, cancelled=false] on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=1, jobCount=1, resetting=false, bundlerAlgorithm=manual, channel=jppf_discovery-1-1[DESKTOP-QMJ16PQ:11111] (id=1) : ACTIVE (JPPFClientConnectionImpl@6f5e70bb)]
+java.lang.OutOfMemoryError: Java heap space
+2021-12-14 21:15:30,189 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-1 - ClassServer] Attempting connection to the class server at DESKTOP-QMJ16PQ:11111
+2021-12-14 21:15:30,189 [WARN ][org.jppf.client.ClassServerDelegateImpl.run(97)]: [jppf_discovery-1-1 - ClassServer] caught java.net.SocketException: Socket closed, will re-initialise ...
+2021-12-14 21:15:30,189 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-1 - ClassServer] Reconnected to the class server
+2021-12-14 21:15:30,189 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=0, jobCount=0, resetting=false, bundlerAlgorithm=manual, channel=jppf_discovery-1-1[DESKTOP-QMJ16PQ:11111] (id=1) : CONNECTING (JPPFClientConnectionImpl@6f5e70bb)]
+java.io.EOFException: could only read 0 bytes out of 4
+	at org.jppf.serialization.SerializationUtils.readToBuf(SerializationUtils.java:453)
+	at org.jppf.serialization.SerializationUtils.readInt(SerializationUtils.java:257)
+	at org.jppf.comm.socket.AbstractSocketWrapper.readInt(AbstractSocketWrapper.java:241)
+	at org.jppf.io.SocketWrapperInputSource.readInt(SocketWrapperInputSource.java:85)
+	at org.jppf.io.IOHelper.readData(IOHelper.java:105)
+	at org.jppf.io.IOHelper.unwrappedData(IOHelper.java:178)
+	at org.jppf.client.BaseJPPFClientConnection.receiveHeader(BaseJPPFClientConnection.java:269)
+	at org.jppf.client.JPPFClientConnectionImpl.receiveHeader(JPPFClientConnectionImpl.java:41)
+	at org.jppf.client.balancer.ChannelWrapperRemoteAsync$RemoteReceiver.run(ChannelWrapperRemoteAsync.java:203)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+2021-12-14 21:15:30,289 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-1 - TasksServer] Attempting connection to the task server at DESKTOP-QMJ16PQ:11111
+2021-12-14 21:15:30,390 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-1 - TasksServer] Reconnected to the JPPF task server
+2021-12-14 21:16:02,209 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised while handling job ClientTaskBundle[bundleId=3, name=Non Blocking Job, jobUuid=F484A863-D630-4023-AD02-0E5F91A6381D, initialTaskCount=1000, taskCount=1000, requeue=false, cancelled=false] on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=1, jobCount=1, resetting=false, bundlerAlgorithm=manual, channel=jppf_discovery-1-1[DESKTOP-QMJ16PQ:11111] (id=1) : ACTIVE (JPPFClientConnectionImpl@6f5e70bb)]
+java.lang.OutOfMemoryError: Java heap space
+2021-12-14 21:16:02,209 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-1 - ClassServer] Attempting connection to the class server at DESKTOP-QMJ16PQ:11111
+2021-12-14 21:16:02,209 [WARN ][org.jppf.client.ClassServerDelegateImpl.run(97)]: [jppf_discovery-1-1 - ClassServer] caught java.net.SocketException: Socket closed, will re-initialise ...
+2021-12-14 21:16:02,209 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=0, jobCount=0, resetting=false, bundlerAlgorithm=manual, channel=jppf_discovery-1-1[DESKTOP-QMJ16PQ:11111] (id=1) : CONNECTING (JPPFClientConnectionImpl@6f5e70bb)]
+java.io.EOFException: could only read 0 bytes out of 4
+	at org.jppf.serialization.SerializationUtils.readToBuf(SerializationUtils.java:453)
+	at org.jppf.serialization.SerializationUtils.readInt(SerializationUtils.java:257)
+	at org.jppf.comm.socket.AbstractSocketWrapper.readInt(AbstractSocketWrapper.java:241)
+	at org.jppf.io.SocketWrapperInputSource.readInt(SocketWrapperInputSource.java:85)
+	at org.jppf.io.IOHelper.readData(IOHelper.java:105)
+	at org.jppf.io.IOHelper.unwrappedData(IOHelper.java:178)
+	at org.jppf.client.BaseJPPFClientConnection.receiveHeader(BaseJPPFClientConnection.java:269)
+	at org.jppf.client.JPPFClientConnectionImpl.receiveHeader(JPPFClientConnectionImpl.java:41)
+	at org.jppf.client.balancer.ChannelWrapperRemoteAsync$RemoteReceiver.run(ChannelWrapperRemoteAsync.java:203)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+2021-12-14 21:16:02,209 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-1 - ClassServer] Reconnected to the class server
+2021-12-14 21:16:02,309 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-1 - TasksServer] Attempting connection to the task server at DESKTOP-QMJ16PQ:11111
+2021-12-14 21:16:02,425 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-1 - TasksServer] Reconnected to the JPPF task server
+2021-12-14 21:16:23,768 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised while handling job ClientTaskBundle[bundleId=4, name=Non Blocking Job, jobUuid=F484A863-D630-4023-AD02-0E5F91A6381D, initialTaskCount=1000, taskCount=1000, requeue=false, cancelled=false] on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=1, jobCount=1, resetting=false, bundlerAlgorithm=manual, channel=jppf_discovery-1-1[DESKTOP-QMJ16PQ:11111] (id=1) : ACTIVE (JPPFClientConnectionImpl@6f5e70bb)]
+java.lang.OutOfMemoryError: Java heap space
+2021-12-14 21:16:23,768 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-1 - ClassServer] Attempting connection to the class server at DESKTOP-QMJ16PQ:11111
+2021-12-14 21:16:23,768 [WARN ][org.jppf.client.ClassServerDelegateImpl.run(97)]: [jppf_discovery-1-1 - ClassServer] caught java.net.SocketException: Socket closed, will re-initialise ...
+2021-12-14 21:16:23,768 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=0, jobCount=0, resetting=false, bundlerAlgorithm=manual, channel=jppf_discovery-1-1[DESKTOP-QMJ16PQ:11111] (id=1) : CONNECTING (JPPFClientConnectionImpl@6f5e70bb)]
+java.io.EOFException: could only read 0 bytes out of 4
+	at org.jppf.serialization.SerializationUtils.readToBuf(SerializationUtils.java:453)
+	at org.jppf.serialization.SerializationUtils.readInt(SerializationUtils.java:257)
+	at org.jppf.comm.socket.AbstractSocketWrapper.readInt(AbstractSocketWrapper.java:241)
+	at org.jppf.io.SocketWrapperInputSource.readInt(SocketWrapperInputSource.java:85)
+	at org.jppf.io.IOHelper.readData(IOHelper.java:105)
+	at org.jppf.io.IOHelper.unwrappedData(IOHelper.java:178)
+	at org.jppf.client.BaseJPPFClientConnection.receiveHeader(BaseJPPFClientConnection.java:269)
+	at org.jppf.client.JPPFClientConnectionImpl.receiveHeader(JPPFClientConnectionImpl.java:41)
+	at org.jppf.client.balancer.ChannelWrapperRemoteAsync$RemoteReceiver.run(ChannelWrapperRemoteAsync.java:203)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+2021-12-14 21:16:23,768 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-1 - ClassServer] Reconnected to the class server
+2021-12-14 21:16:23,868 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-1 - TasksServer] Attempting connection to the task server at DESKTOP-QMJ16PQ:11111
+2021-12-14 21:16:23,984 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-1 - TasksServer] Reconnected to the JPPF task server
+2021-12-14 21:16:56,322 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised while handling job ClientTaskBundle[bundleId=5, name=Non Blocking Job, jobUuid=F484A863-D630-4023-AD02-0E5F91A6381D, initialTaskCount=1000, taskCount=1000, requeue=false, cancelled=false] on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=1, jobCount=1, resetting=false, bundlerAlgorithm=manual, channel=jppf_discovery-1-1[DESKTOP-QMJ16PQ:11111] (id=1) : ACTIVE (JPPFClientConnectionImpl@6f5e70bb)]
+java.lang.OutOfMemoryError: Java heap space
+2021-12-14 21:16:56,322 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-1 - ClassServer] Attempting connection to the class server at DESKTOP-QMJ16PQ:11111
+2021-12-14 21:16:56,322 [WARN ][org.jppf.client.ClassServerDelegateImpl.run(97)]: [jppf_discovery-1-1 - ClassServer] caught java.net.SocketException: Socket closed, will re-initialise ...
+2021-12-14 21:16:56,322 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=0, jobCount=0, resetting=false, bundlerAlgorithm=manual, channel=jppf_discovery-1-1[DESKTOP-QMJ16PQ:11111] (id=1) : CONNECTING (JPPFClientConnectionImpl@6f5e70bb)]
+java.io.EOFException: could only read 0 bytes out of 4
+	at org.jppf.serialization.SerializationUtils.readToBuf(SerializationUtils.java:453)
+	at org.jppf.serialization.SerializationUtils.readInt(SerializationUtils.java:257)
+	at org.jppf.comm.socket.AbstractSocketWrapper.readInt(AbstractSocketWrapper.java:241)
+	at org.jppf.io.SocketWrapperInputSource.readInt(SocketWrapperInputSource.java:85)
+	at org.jppf.io.IOHelper.readData(IOHelper.java:105)
+	at org.jppf.io.IOHelper.unwrappedData(IOHelper.java:178)
+	at org.jppf.client.BaseJPPFClientConnection.receiveHeader(BaseJPPFClientConnection.java:269)
+	at org.jppf.client.JPPFClientConnectionImpl.receiveHeader(JPPFClientConnectionImpl.java:41)
+	at org.jppf.client.balancer.ChannelWrapperRemoteAsync$RemoteReceiver.run(ChannelWrapperRemoteAsync.java:203)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+2021-12-14 21:16:56,322 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-1 - ClassServer] Reconnected to the class server
+2021-12-14 21:16:56,422 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-1 - TasksServer] Attempting connection to the task server at DESKTOP-QMJ16PQ:11111
+2021-12-14 21:16:56,538 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-1 - TasksServer] Reconnected to the JPPF task server
+2021-12-14 21:18:02,231 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised while handling job ClientTaskBundle[bundleId=6, name=Non Blocking Job, jobUuid=F484A863-D630-4023-AD02-0E5F91A6381D, initialTaskCount=1000, taskCount=1000, requeue=false, cancelled=false] on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=1, jobCount=1, resetting=false, bundlerAlgorithm=manual, channel=jppf_discovery-1-1[DESKTOP-QMJ16PQ:11111] (id=1) : ACTIVE (JPPFClientConnectionImpl@6f5e70bb)]
+java.lang.OutOfMemoryError: Java heap space
+2021-12-14 21:18:02,247 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-1 - ClassServer] Attempting connection to the class server at DESKTOP-QMJ16PQ:11111
+2021-12-14 21:18:02,247 [WARN ][org.jppf.client.ClassServerDelegateImpl.run(97)]: [jppf_discovery-1-1 - ClassServer] caught java.net.SocketException: Socket closed, will re-initialise ...
+2021-12-14 21:18:02,247 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=0, jobCount=0, resetting=false, bundlerAlgorithm=manual, channel=jppf_discovery-1-1[DESKTOP-QMJ16PQ:11111] (id=1) : DISCONNECTED (JPPFClientConnectionImpl@6f5e70bb)]
+java.io.EOFException: could only read 0 bytes out of 4
+	at org.jppf.serialization.SerializationUtils.readToBuf(SerializationUtils.java:453)
+	at org.jppf.serialization.SerializationUtils.readInt(SerializationUtils.java:257)
+	at org.jppf.comm.socket.AbstractSocketWrapper.readInt(AbstractSocketWrapper.java:241)
+	at org.jppf.io.SocketWrapperInputSource.readInt(SocketWrapperInputSource.java:85)
+	at org.jppf.io.IOHelper.readData(IOHelper.java:105)
+	at org.jppf.io.IOHelper.unwrappedData(IOHelper.java:178)
+	at org.jppf.client.BaseJPPFClientConnection.receiveHeader(BaseJPPFClientConnection.java:269)
+	at org.jppf.client.JPPFClientConnectionImpl.receiveHeader(JPPFClientConnectionImpl.java:41)
+	at org.jppf.client.balancer.ChannelWrapperRemoteAsync$RemoteReceiver.run(ChannelWrapperRemoteAsync.java:203)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+2021-12-14 21:18:02,247 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-1 - ClassServer] Reconnected to the class server
+2021-12-14 21:18:02,385 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-1 - TasksServer] Attempting connection to the task server at DESKTOP-QMJ16PQ:11111
+2021-12-14 21:18:02,516 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-1 - TasksServer] Reconnected to the JPPF task server
+2021-12-14 21:18:16,469 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised while handling job ClientTaskBundle[bundleId=7, name=Non Blocking Job, jobUuid=F484A863-D630-4023-AD02-0E5F91A6381D, initialTaskCount=1000, taskCount=1000, requeue=false, cancelled=false] on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=1, jobCount=1, resetting=false, bundlerAlgorithm=manual, channel=jppf_discovery-1-1[DESKTOP-QMJ16PQ:11111] (id=1) : ACTIVE (JPPFClientConnectionImpl@6f5e70bb)]
+java.lang.OutOfMemoryError: Java heap space
+2021-12-14 21:18:16,469 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-1 - ClassServer] Attempting connection to the class server at DESKTOP-QMJ16PQ:11111
+2021-12-14 21:18:16,469 [WARN ][org.jppf.client.ClassServerDelegateImpl.run(97)]: [jppf_discovery-1-1 - ClassServer] caught java.net.SocketException: Socket closed, will re-initialise ...
+2021-12-14 21:18:16,469 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-1 - ClassServer] Reconnected to the class server
+2021-12-14 21:18:16,469 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=0, jobCount=0, resetting=false, bundlerAlgorithm=manual, channel=jppf_discovery-1-1[DESKTOP-QMJ16PQ:11111] (id=1) : CONNECTING (JPPFClientConnectionImpl@6f5e70bb)]
+java.io.EOFException: could only read 0 bytes out of 4
+	at org.jppf.serialization.SerializationUtils.readToBuf(SerializationUtils.java:453)
+	at org.jppf.serialization.SerializationUtils.readInt(SerializationUtils.java:257)
+	at org.jppf.comm.socket.AbstractSocketWrapper.readInt(AbstractSocketWrapper.java:241)
+	at org.jppf.io.SocketWrapperInputSource.readInt(SocketWrapperInputSource.java:85)
+	at org.jppf.io.IOHelper.readData(IOHelper.java:105)
+	at org.jppf.io.IOHelper.unwrappedData(IOHelper.java:178)
+	at org.jppf.client.BaseJPPFClientConnection.receiveHeader(BaseJPPFClientConnection.java:269)
+	at org.jppf.client.JPPFClientConnectionImpl.receiveHeader(JPPFClientConnectionImpl.java:41)
+	at org.jppf.client.balancer.ChannelWrapperRemoteAsync$RemoteReceiver.run(ChannelWrapperRemoteAsync.java:203)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+2021-12-14 21:18:16,569 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-1 - TasksServer] Attempting connection to the task server at DESKTOP-QMJ16PQ:11111
+2021-12-14 21:18:16,669 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-1 - TasksServer] Reconnected to the JPPF task server
+2021-12-14 21:18:54,413 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised while handling job ClientTaskBundle[bundleId=8, name=Non Blocking Job, jobUuid=F484A863-D630-4023-AD02-0E5F91A6381D, initialTaskCount=1000, taskCount=1000, requeue=false, cancelled=false] on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=1, jobCount=1, resetting=false, bundlerAlgorithm=manual, channel=jppf_discovery-1-1[DESKTOP-QMJ16PQ:11111] (id=1) : ACTIVE (JPPFClientConnectionImpl@6f5e70bb)]
+java.lang.OutOfMemoryError: Java heap space
+2021-12-14 21:18:54,413 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-1 - ClassServer] Attempting connection to the class server at DESKTOP-QMJ16PQ:11111
+2021-12-14 21:18:54,413 [WARN ][org.jppf.client.ClassServerDelegateImpl.run(97)]: [jppf_discovery-1-1 - ClassServer] caught java.net.SocketException: Socket closed, will re-initialise ...
+2021-12-14 21:18:54,413 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=0, jobCount=0, resetting=false, bundlerAlgorithm=manual, channel=jppf_discovery-1-1[DESKTOP-QMJ16PQ:11111] (id=1) : CONNECTING (JPPFClientConnectionImpl@6f5e70bb)]
+java.io.EOFException: could only read 0 bytes out of 4
+	at org.jppf.serialization.SerializationUtils.readToBuf(SerializationUtils.java:453)
+	at org.jppf.serialization.SerializationUtils.readInt(SerializationUtils.java:257)
+	at org.jppf.comm.socket.AbstractSocketWrapper.readInt(AbstractSocketWrapper.java:241)
+	at org.jppf.io.SocketWrapperInputSource.readInt(SocketWrapperInputSource.java:85)
+	at org.jppf.io.IOHelper.readData(IOHelper.java:105)
+	at org.jppf.io.IOHelper.unwrappedData(IOHelper.java:178)
+	at org.jppf.client.BaseJPPFClientConnection.receiveHeader(BaseJPPFClientConnection.java:269)
+	at org.jppf.client.JPPFClientConnectionImpl.receiveHeader(JPPFClientConnectionImpl.java:41)
+	at org.jppf.client.balancer.ChannelWrapperRemoteAsync$RemoteReceiver.run(ChannelWrapperRemoteAsync.java:203)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+2021-12-14 21:18:54,428 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-1 - ClassServer] Reconnected to the class server
+2021-12-14 21:18:54,578 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-1 - TasksServer] Attempting connection to the task server at DESKTOP-QMJ16PQ:11111
+2021-12-14 21:18:54,691 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-1 - TasksServer] Reconnected to the JPPF task server
+2021-12-14 21:19:43,779 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised while handling job ClientTaskBundle[bundleId=9, name=Non Blocking Job, jobUuid=F484A863-D630-4023-AD02-0E5F91A6381D, initialTaskCount=1000, taskCount=1000, requeue=false, cancelled=false] on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=1, jobCount=1, resetting=false, bundlerAlgorithm=manual, channel=jppf_discovery-1-1[DESKTOP-QMJ16PQ:11111] (id=1) : ACTIVE (JPPFClientConnectionImpl@6f5e70bb)]
+java.lang.OutOfMemoryError: Java heap space
+2021-12-14 21:19:43,779 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-1 - ClassServer] Attempting connection to the class server at DESKTOP-QMJ16PQ:11111
+2021-12-14 21:19:43,779 [WARN ][org.jppf.client.ClassServerDelegateImpl.run(97)]: [jppf_discovery-1-1 - ClassServer] caught java.net.SocketException: Socket closed, will re-initialise ...
+2021-12-14 21:19:43,779 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=0, jobCount=0, resetting=false, bundlerAlgorithm=manual, channel=jppf_discovery-1-1[DESKTOP-QMJ16PQ:11111] (id=1) : CONNECTING (JPPFClientConnectionImpl@6f5e70bb)]
+java.io.EOFException: could only read 0 bytes out of 4
+	at org.jppf.serialization.SerializationUtils.readToBuf(SerializationUtils.java:453)
+	at org.jppf.serialization.SerializationUtils.readInt(SerializationUtils.java:257)
+	at org.jppf.comm.socket.AbstractSocketWrapper.readInt(AbstractSocketWrapper.java:241)
+	at org.jppf.io.SocketWrapperInputSource.readInt(SocketWrapperInputSource.java:85)
+	at org.jppf.io.IOHelper.readData(IOHelper.java:105)
+	at org.jppf.io.IOHelper.unwrappedData(IOHelper.java:178)
+	at org.jppf.client.BaseJPPFClientConnection.receiveHeader(BaseJPPFClientConnection.java:269)
+	at org.jppf.client.JPPFClientConnectionImpl.receiveHeader(JPPFClientConnectionImpl.java:41)
+	at org.jppf.client.balancer.ChannelWrapperRemoteAsync$RemoteReceiver.run(ChannelWrapperRemoteAsync.java:203)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+2021-12-14 21:19:43,779 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-1 - ClassServer] Reconnected to the class server
+2021-12-14 21:19:43,894 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-1 - TasksServer] Attempting connection to the task server at DESKTOP-QMJ16PQ:11111
+2021-12-14 21:19:43,995 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-1 - TasksServer] Reconnected to the JPPF task server
+2021-12-14 21:20:13,867 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised while handling job ClientTaskBundle[bundleId=10, name=Non Blocking Job, jobUuid=F484A863-D630-4023-AD02-0E5F91A6381D, initialTaskCount=1000, taskCount=1000, requeue=false, cancelled=false] on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=1, jobCount=1, resetting=false, bundlerAlgorithm=manual, channel=jppf_discovery-1-1[DESKTOP-QMJ16PQ:11111] (id=1) : ACTIVE (JPPFClientConnectionImpl@6f5e70bb)]
+java.lang.OutOfMemoryError: Java heap space
+2021-12-14 21:20:13,867 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-1 - ClassServer] Attempting connection to the class server at DESKTOP-QMJ16PQ:11111
+2021-12-14 21:20:13,867 [WARN ][org.jppf.client.ClassServerDelegateImpl.run(97)]: [jppf_discovery-1-1 - ClassServer] caught java.net.SocketException: Socket closed, will re-initialise ...
+2021-12-14 21:20:13,867 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=0, jobCount=0, resetting=false, bundlerAlgorithm=manual, channel=jppf_discovery-1-1[DESKTOP-QMJ16PQ:11111] (id=1) : CONNECTING (JPPFClientConnectionImpl@6f5e70bb)]
+java.io.EOFException: could only read 0 bytes out of 4
+	at org.jppf.serialization.SerializationUtils.readToBuf(SerializationUtils.java:453)
+	at org.jppf.serialization.SerializationUtils.readInt(SerializationUtils.java:257)
+	at org.jppf.comm.socket.AbstractSocketWrapper.readInt(AbstractSocketWrapper.java:241)
+	at org.jppf.io.SocketWrapperInputSource.readInt(SocketWrapperInputSource.java:85)
+	at org.jppf.io.IOHelper.readData(IOHelper.java:105)
+	at org.jppf.io.IOHelper.unwrappedData(IOHelper.java:178)
+	at org.jppf.client.BaseJPPFClientConnection.receiveHeader(BaseJPPFClientConnection.java:269)
+	at org.jppf.client.JPPFClientConnectionImpl.receiveHeader(JPPFClientConnectionImpl.java:41)
+	at org.jppf.client.balancer.ChannelWrapperRemoteAsync$RemoteReceiver.run(ChannelWrapperRemoteAsync.java:203)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+2021-12-14 21:20:13,867 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-1 - ClassServer] Reconnected to the class server
+2021-12-14 21:20:13,968 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-1 - TasksServer] Attempting connection to the task server at DESKTOP-QMJ16PQ:11111
+2021-12-14 21:20:14,083 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-1 - TasksServer] Reconnected to the JPPF task server
+2021-12-14 21:20:32,265 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised while handling job ClientTaskBundle[bundleId=11, name=Non Blocking Job, jobUuid=F484A863-D630-4023-AD02-0E5F91A6381D, initialTaskCount=1000, taskCount=1000, requeue=false, cancelled=false] on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=1, jobCount=1, resetting=false, bundlerAlgorithm=manual, channel=jppf_discovery-1-1[DESKTOP-QMJ16PQ:11111] (id=1) : ACTIVE (JPPFClientConnectionImpl@6f5e70bb)]
+java.lang.OutOfMemoryError: Java heap space
+2021-12-14 21:20:32,267 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-1 - ClassServer] Attempting connection to the class server at DESKTOP-QMJ16PQ:11111
+2021-12-14 21:20:32,269 [WARN ][org.jppf.client.ClassServerDelegateImpl.run(97)]: [jppf_discovery-1-1 - ClassServer] caught java.net.SocketException: Socket closed, will re-initialise ...
+2021-12-14 21:20:32,270 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-1 - ClassServer] Reconnected to the class server
+2021-12-14 21:20:32,270 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=0, jobCount=0, resetting=false, bundlerAlgorithm=manual, channel=jppf_discovery-1-1[DESKTOP-QMJ16PQ:11111] (id=1) : CONNECTING (JPPFClientConnectionImpl@6f5e70bb)]
+java.io.EOFException: could only read 0 bytes out of 4
+	at org.jppf.serialization.SerializationUtils.readToBuf(SerializationUtils.java:453)
+	at org.jppf.serialization.SerializationUtils.readInt(SerializationUtils.java:257)
+	at org.jppf.comm.socket.AbstractSocketWrapper.readInt(AbstractSocketWrapper.java:241)
+	at org.jppf.io.SocketWrapperInputSource.readInt(SocketWrapperInputSource.java:85)
+	at org.jppf.io.IOHelper.readData(IOHelper.java:105)
+	at org.jppf.io.IOHelper.unwrappedData(IOHelper.java:178)
+	at org.jppf.client.BaseJPPFClientConnection.receiveHeader(BaseJPPFClientConnection.java:269)
+	at org.jppf.client.JPPFClientConnectionImpl.receiveHeader(JPPFClientConnectionImpl.java:41)
+	at org.jppf.client.balancer.ChannelWrapperRemoteAsync$RemoteReceiver.run(ChannelWrapperRemoteAsync.java:203)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+2021-12-14 21:20:32,381 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-1 - TasksServer] Attempting connection to the task server at DESKTOP-QMJ16PQ:11111
+2021-12-14 21:20:32,482 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-1 - TasksServer] Reconnected to the JPPF task server
+2021-12-14 21:21:37,056 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised while handling job ClientTaskBundle[bundleId=12, name=Non Blocking Job, jobUuid=F484A863-D630-4023-AD02-0E5F91A6381D, initialTaskCount=1000, taskCount=1000, requeue=false, cancelled=false] on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=1, jobCount=1, resetting=false, bundlerAlgorithm=manual, channel=jppf_discovery-1-1[DESKTOP-QMJ16PQ:11111] (id=1) : ACTIVE (JPPFClientConnectionImpl@6f5e70bb)]
+java.lang.OutOfMemoryError: Java heap space
+2021-12-14 21:21:37,056 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-1 - ClassServer] Attempting connection to the class server at DESKTOP-QMJ16PQ:11111
+2021-12-14 21:21:37,056 [WARN ][org.jppf.client.ClassServerDelegateImpl.run(97)]: [jppf_discovery-1-1 - ClassServer] caught java.net.SocketException: Socket closed, will re-initialise ...
+2021-12-14 21:21:37,056 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=0, jobCount=0, resetting=false, bundlerAlgorithm=manual, channel=jppf_discovery-1-1[DESKTOP-QMJ16PQ:11111] (id=1) : CONNECTING (JPPFClientConnectionImpl@6f5e70bb)]
+java.io.EOFException: could only read 0 bytes out of 4
+	at org.jppf.serialization.SerializationUtils.readToBuf(SerializationUtils.java:453)
+	at org.jppf.serialization.SerializationUtils.readInt(SerializationUtils.java:257)
+	at org.jppf.comm.socket.AbstractSocketWrapper.readInt(AbstractSocketWrapper.java:241)
+	at org.jppf.io.SocketWrapperInputSource.readInt(SocketWrapperInputSource.java:85)
+	at org.jppf.io.IOHelper.readData(IOHelper.java:105)
+	at org.jppf.io.IOHelper.unwrappedData(IOHelper.java:178)
+	at org.jppf.client.BaseJPPFClientConnection.receiveHeader(BaseJPPFClientConnection.java:269)
+	at org.jppf.client.JPPFClientConnectionImpl.receiveHeader(JPPFClientConnectionImpl.java:41)
+	at org.jppf.client.balancer.ChannelWrapperRemoteAsync$RemoteReceiver.run(ChannelWrapperRemoteAsync.java:203)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+2021-12-14 21:21:37,056 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-1 - ClassServer] Reconnected to the class server
+2021-12-14 21:21:37,156 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-1 - TasksServer] Attempting connection to the task server at DESKTOP-QMJ16PQ:11111
+2021-12-14 21:21:37,256 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-1 - TasksServer] Reconnected to the JPPF task server
+2021-12-14 21:21:39,762 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised while handling job ClientTaskBundle[bundleId=13, name=Non Blocking Job, jobUuid=F484A863-D630-4023-AD02-0E5F91A6381D, initialTaskCount=1000, taskCount=1000, requeue=false, cancelled=false] on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=1, jobCount=1, resetting=false, bundlerAlgorithm=manual, channel=jppf_discovery-1-1[DESKTOP-QMJ16PQ:11111] (id=1) : ACTIVE (JPPFClientConnectionImpl@6f5e70bb)]
+java.lang.OutOfMemoryError: Java heap space
+2021-12-14 21:21:39,777 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-1 - ClassServer] Attempting connection to the class server at DESKTOP-QMJ16PQ:11111
+2021-12-14 21:21:39,777 [WARN ][org.jppf.client.ClassServerDelegateImpl.run(97)]: [jppf_discovery-1-1 - ClassServer] caught java.net.SocketException: Socket closed, will re-initialise ...
+2021-12-14 21:21:39,777 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-1 - ClassServer] Reconnected to the class server
+2021-12-14 21:21:39,777 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=0, jobCount=0, resetting=false, bundlerAlgorithm=manual, channel=jppf_discovery-1-1[DESKTOP-QMJ16PQ:11111] (id=1) : CONNECTING (JPPFClientConnectionImpl@6f5e70bb)]
+java.io.EOFException: could only read 0 bytes out of 4
+	at org.jppf.serialization.SerializationUtils.readToBuf(SerializationUtils.java:453)
+	at org.jppf.serialization.SerializationUtils.readInt(SerializationUtils.java:257)
+	at org.jppf.comm.socket.AbstractSocketWrapper.readInt(AbstractSocketWrapper.java:241)
+	at org.jppf.io.SocketWrapperInputSource.readInt(SocketWrapperInputSource.java:85)
+	at org.jppf.io.IOHelper.readData(IOHelper.java:105)
+	at org.jppf.io.IOHelper.unwrappedData(IOHelper.java:178)
+	at org.jppf.client.BaseJPPFClientConnection.receiveHeader(BaseJPPFClientConnection.java:269)
+	at org.jppf.client.JPPFClientConnectionImpl.receiveHeader(JPPFClientConnectionImpl.java:41)
+	at org.jppf.client.balancer.ChannelWrapperRemoteAsync$RemoteReceiver.run(ChannelWrapperRemoteAsync.java:203)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+2021-12-14 21:21:39,878 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-1 - TasksServer] Attempting connection to the task server at DESKTOP-QMJ16PQ:11111
+2021-12-14 21:21:40,009 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-1 - TasksServer] Reconnected to the JPPF task server
+2021-12-14 21:24:28,905 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised while handling job ClientTaskBundle[bundleId=14, name=Non Blocking Job, jobUuid=F484A863-D630-4023-AD02-0E5F91A6381D, initialTaskCount=1000, taskCount=1000, requeue=false, cancelled=false] on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=1, jobCount=1, resetting=false, bundlerAlgorithm=manual, channel=jppf_discovery-1-1[DESKTOP-QMJ16PQ:11111] (id=1) : ACTIVE (JPPFClientConnectionImpl@6f5e70bb)]
+java.lang.OutOfMemoryError: Java heap space
+2021-12-14 21:24:28,905 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-1 - ClassServer] Attempting connection to the class server at DESKTOP-QMJ16PQ:11111
+2021-12-14 21:24:28,905 [WARN ][org.jppf.client.ClassServerDelegateImpl.run(97)]: [jppf_discovery-1-1 - ClassServer] caught java.net.SocketException: Socket closed, will re-initialise ...
+2021-12-14 21:24:28,905 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=0, jobCount=0, resetting=false, bundlerAlgorithm=manual, channel=jppf_discovery-1-1[DESKTOP-QMJ16PQ:11111] (id=1) : CONNECTING (JPPFClientConnectionImpl@6f5e70bb)]
+java.io.EOFException: could only read 0 bytes out of 4
+	at org.jppf.serialization.SerializationUtils.readToBuf(SerializationUtils.java:453)
+	at org.jppf.serialization.SerializationUtils.readInt(SerializationUtils.java:257)
+	at org.jppf.comm.socket.AbstractSocketWrapper.readInt(AbstractSocketWrapper.java:241)
+	at org.jppf.io.SocketWrapperInputSource.readInt(SocketWrapperInputSource.java:85)
+	at org.jppf.io.IOHelper.readData(IOHelper.java:105)
+	at org.jppf.io.IOHelper.unwrappedData(IOHelper.java:178)
+	at org.jppf.client.BaseJPPFClientConnection.receiveHeader(BaseJPPFClientConnection.java:269)
+	at org.jppf.client.JPPFClientConnectionImpl.receiveHeader(JPPFClientConnectionImpl.java:41)
+	at org.jppf.client.balancer.ChannelWrapperRemoteAsync$RemoteReceiver.run(ChannelWrapperRemoteAsync.java:203)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+2021-12-14 21:24:28,905 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-1 - ClassServer] Reconnected to the class server
+2021-12-14 21:24:29,005 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-1 - TasksServer] Attempting connection to the task server at DESKTOP-QMJ16PQ:11111
+2021-12-14 21:24:29,137 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-1 - TasksServer] Reconnected to the JPPF task server
+2021-12-14 21:25:22,258 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised while handling job ClientTaskBundle[bundleId=15, name=Non Blocking Job, jobUuid=F484A863-D630-4023-AD02-0E5F91A6381D, initialTaskCount=1000, taskCount=1000, requeue=false, cancelled=false] on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=1, jobCount=1, resetting=false, bundlerAlgorithm=manual, channel=jppf_discovery-1-1[DESKTOP-QMJ16PQ:11111] (id=1) : ACTIVE (JPPFClientConnectionImpl@6f5e70bb)]
+java.lang.OutOfMemoryError: Java heap space
+2021-12-14 21:25:22,258 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-1 - ClassServer] Attempting connection to the class server at DESKTOP-QMJ16PQ:11111
+2021-12-14 21:25:22,258 [WARN ][org.jppf.client.ClassServerDelegateImpl.run(97)]: [jppf_discovery-1-1 - ClassServer] caught java.net.SocketException: Socket closed, will re-initialise ...
+2021-12-14 21:25:22,258 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=0, jobCount=0, resetting=false, bundlerAlgorithm=manual, channel=jppf_discovery-1-1[DESKTOP-QMJ16PQ:11111] (id=1) : CONNECTING (JPPFClientConnectionImpl@6f5e70bb)]
+java.io.EOFException: could only read 0 bytes out of 4
+	at org.jppf.serialization.SerializationUtils.readToBuf(SerializationUtils.java:453)
+	at org.jppf.serialization.SerializationUtils.readInt(SerializationUtils.java:257)
+	at org.jppf.comm.socket.AbstractSocketWrapper.readInt(AbstractSocketWrapper.java:241)
+	at org.jppf.io.SocketWrapperInputSource.readInt(SocketWrapperInputSource.java:85)
+	at org.jppf.io.IOHelper.readData(IOHelper.java:105)
+	at org.jppf.io.IOHelper.unwrappedData(IOHelper.java:178)
+	at org.jppf.client.BaseJPPFClientConnection.receiveHeader(BaseJPPFClientConnection.java:269)
+	at org.jppf.client.JPPFClientConnectionImpl.receiveHeader(JPPFClientConnectionImpl.java:41)
+	at org.jppf.client.balancer.ChannelWrapperRemoteAsync$RemoteReceiver.run(ChannelWrapperRemoteAsync.java:203)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+2021-12-14 21:25:22,258 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-1 - ClassServer] Reconnected to the class server
+2021-12-14 21:25:22,359 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-1 - TasksServer] Attempting connection to the task server at DESKTOP-QMJ16PQ:11111
+2021-12-14 21:25:22,475 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-1 - TasksServer] Reconnected to the JPPF task server
+2021-12-14 21:25:37,079 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised while handling job ClientTaskBundle[bundleId=16, name=Non Blocking Job, jobUuid=F484A863-D630-4023-AD02-0E5F91A6381D, initialTaskCount=1000, taskCount=1000, requeue=false, cancelled=false] on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=1, jobCount=1, resetting=false, bundlerAlgorithm=manual, channel=jppf_discovery-1-1[DESKTOP-QMJ16PQ:11111] (id=1) : ACTIVE (JPPFClientConnectionImpl@6f5e70bb)]
+java.lang.OutOfMemoryError: Java heap space
+2021-12-14 21:25:37,079 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-1 - ClassServer] Attempting connection to the class server at DESKTOP-QMJ16PQ:11111
+2021-12-14 21:25:37,079 [WARN ][org.jppf.client.ClassServerDelegateImpl.run(97)]: [jppf_discovery-1-1 - ClassServer] caught java.net.SocketException: Socket closed, will re-initialise ...
+2021-12-14 21:25:37,079 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=0, jobCount=0, resetting=false, bundlerAlgorithm=manual, channel=jppf_discovery-1-1[DESKTOP-QMJ16PQ:11111] (id=1) : CONNECTING (JPPFClientConnectionImpl@6f5e70bb)]
+java.io.EOFException: could only read 0 bytes out of 4
+	at org.jppf.serialization.SerializationUtils.readToBuf(SerializationUtils.java:453)
+	at org.jppf.serialization.SerializationUtils.readInt(SerializationUtils.java:257)
+	at org.jppf.comm.socket.AbstractSocketWrapper.readInt(AbstractSocketWrapper.java:241)
+	at org.jppf.io.SocketWrapperInputSource.readInt(SocketWrapperInputSource.java:85)
+	at org.jppf.io.IOHelper.readData(IOHelper.java:105)
+	at org.jppf.io.IOHelper.unwrappedData(IOHelper.java:178)
+	at org.jppf.client.BaseJPPFClientConnection.receiveHeader(BaseJPPFClientConnection.java:269)
+	at org.jppf.client.JPPFClientConnectionImpl.receiveHeader(JPPFClientConnectionImpl.java:41)
+	at org.jppf.client.balancer.ChannelWrapperRemoteAsync$RemoteReceiver.run(ChannelWrapperRemoteAsync.java:203)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+2021-12-14 21:25:37,079 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-1 - ClassServer] Reconnected to the class server
+2021-12-14 21:25:37,179 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-1 - TasksServer] Attempting connection to the task server at DESKTOP-QMJ16PQ:11111
+2021-12-14 21:25:37,264 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-1 - TasksServer] Reconnected to the JPPF task server
+2021-12-14 21:25:44,038 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised while handling job ClientTaskBundle[bundleId=17, name=Non Blocking Job, jobUuid=F484A863-D630-4023-AD02-0E5F91A6381D, initialTaskCount=1000, taskCount=1000, requeue=false, cancelled=false] on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=1, jobCount=1, resetting=false, bundlerAlgorithm=manual, channel=jppf_discovery-1-1[DESKTOP-QMJ16PQ:11111] (id=1) : ACTIVE (JPPFClientConnectionImpl@6f5e70bb)]
+java.lang.OutOfMemoryError: Java heap space
+2021-12-14 21:25:44,038 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-1 - ClassServer] Attempting connection to the class server at DESKTOP-QMJ16PQ:11111
+2021-12-14 21:25:44,038 [WARN ][org.jppf.client.ClassServerDelegateImpl.run(97)]: [jppf_discovery-1-1 - ClassServer] caught java.net.SocketException: Socket closed, will re-initialise ...
+2021-12-14 21:25:44,038 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-1 - ClassServer] Reconnected to the class server
+2021-12-14 21:25:44,038 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=0, jobCount=0, resetting=false, bundlerAlgorithm=manual, channel=jppf_discovery-1-1[DESKTOP-QMJ16PQ:11111] (id=1) : CONNECTING (JPPFClientConnectionImpl@6f5e70bb)]
+java.io.EOFException: could only read 0 bytes out of 4
+	at org.jppf.serialization.SerializationUtils.readToBuf(SerializationUtils.java:453)
+	at org.jppf.serialization.SerializationUtils.readInt(SerializationUtils.java:257)
+	at org.jppf.comm.socket.AbstractSocketWrapper.readInt(AbstractSocketWrapper.java:241)
+	at org.jppf.io.SocketWrapperInputSource.readInt(SocketWrapperInputSource.java:85)
+	at org.jppf.io.IOHelper.readData(IOHelper.java:105)
+	at org.jppf.io.IOHelper.unwrappedData(IOHelper.java:178)
+	at org.jppf.client.BaseJPPFClientConnection.receiveHeader(BaseJPPFClientConnection.java:269)
+	at org.jppf.client.JPPFClientConnectionImpl.receiveHeader(JPPFClientConnectionImpl.java:41)
+	at org.jppf.client.balancer.ChannelWrapperRemoteAsync$RemoteReceiver.run(ChannelWrapperRemoteAsync.java:203)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+2021-12-14 21:25:44,138 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-1 - TasksServer] Attempting connection to the task server at DESKTOP-QMJ16PQ:11111
+2021-12-14 21:25:44,223 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-1 - TasksServer] Reconnected to the JPPF task server
+2021-12-14 21:25:46,006 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised while handling job ClientTaskBundle[bundleId=18, name=Non Blocking Job, jobUuid=F484A863-D630-4023-AD02-0E5F91A6381D, initialTaskCount=1000, taskCount=1000, requeue=false, cancelled=false] on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=1, jobCount=1, resetting=false, bundlerAlgorithm=manual, channel=jppf_discovery-1-1[DESKTOP-QMJ16PQ:11111] (id=1) : ACTIVE (JPPFClientConnectionImpl@6f5e70bb)]
+java.lang.OutOfMemoryError: Java heap space
+2021-12-14 21:25:46,006 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-1 - ClassServer] Attempting connection to the class server at DESKTOP-QMJ16PQ:11111
+2021-12-14 21:25:46,006 [WARN ][org.jppf.client.ClassServerDelegateImpl.run(97)]: [jppf_discovery-1-1 - ClassServer] caught java.net.SocketException: Socket closed, will re-initialise ...
+2021-12-14 21:25:46,006 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=0, jobCount=0, resetting=false, bundlerAlgorithm=manual, channel=jppf_discovery-1-1[DESKTOP-QMJ16PQ:11111] (id=1) : CONNECTING (JPPFClientConnectionImpl@6f5e70bb)]
+java.io.EOFException: could only read 0 bytes out of 4
+	at org.jppf.serialization.SerializationUtils.readToBuf(SerializationUtils.java:453)
+	at org.jppf.serialization.SerializationUtils.readInt(SerializationUtils.java:257)
+	at org.jppf.comm.socket.AbstractSocketWrapper.readInt(AbstractSocketWrapper.java:241)
+	at org.jppf.io.SocketWrapperInputSource.readInt(SocketWrapperInputSource.java:85)
+	at org.jppf.io.IOHelper.readData(IOHelper.java:105)
+	at org.jppf.io.IOHelper.unwrappedData(IOHelper.java:178)
+	at org.jppf.client.BaseJPPFClientConnection.receiveHeader(BaseJPPFClientConnection.java:269)
+	at org.jppf.client.JPPFClientConnectionImpl.receiveHeader(JPPFClientConnectionImpl.java:41)
+	at org.jppf.client.balancer.ChannelWrapperRemoteAsync$RemoteReceiver.run(ChannelWrapperRemoteAsync.java:203)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+2021-12-14 21:25:46,006 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-1 - ClassServer] Reconnected to the class server
+2021-12-14 21:25:46,090 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-1 - TasksServer] Attempting connection to the task server at DESKTOP-QMJ16PQ:11111
+2021-12-14 21:25:46,175 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-1 - TasksServer] Reconnected to the JPPF task server
+2021-12-14 21:25:51,792 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised while handling job ClientTaskBundle[bundleId=19, name=Non Blocking Job, jobUuid=F484A863-D630-4023-AD02-0E5F91A6381D, initialTaskCount=1000, taskCount=1000, requeue=false, cancelled=false] on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=1, jobCount=1, resetting=false, bundlerAlgorithm=manual, channel=jppf_discovery-1-1[DESKTOP-QMJ16PQ:11111] (id=1) : ACTIVE (JPPFClientConnectionImpl@6f5e70bb)]
+java.lang.OutOfMemoryError: Java heap space
+2021-12-14 21:25:51,792 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-1 - ClassServer] Attempting connection to the class server at DESKTOP-QMJ16PQ:11111
+2021-12-14 21:25:51,792 [WARN ][org.jppf.client.ClassServerDelegateImpl.run(97)]: [jppf_discovery-1-1 - ClassServer] caught java.net.SocketException: Socket closed, will re-initialise ...
+2021-12-14 21:25:51,792 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=0, jobCount=0, resetting=false, bundlerAlgorithm=manual, channel=jppf_discovery-1-1[DESKTOP-QMJ16PQ:11111] (id=1) : CONNECTING (JPPFClientConnectionImpl@6f5e70bb)]
+java.io.EOFException: could only read 0 bytes out of 4
+	at org.jppf.serialization.SerializationUtils.readToBuf(SerializationUtils.java:453)
+	at org.jppf.serialization.SerializationUtils.readInt(SerializationUtils.java:257)
+	at org.jppf.comm.socket.AbstractSocketWrapper.readInt(AbstractSocketWrapper.java:241)
+	at org.jppf.io.SocketWrapperInputSource.readInt(SocketWrapperInputSource.java:85)
+	at org.jppf.io.IOHelper.readData(IOHelper.java:105)
+	at org.jppf.io.IOHelper.unwrappedData(IOHelper.java:178)
+	at org.jppf.client.BaseJPPFClientConnection.receiveHeader(BaseJPPFClientConnection.java:269)
+	at org.jppf.client.JPPFClientConnectionImpl.receiveHeader(JPPFClientConnectionImpl.java:41)
+	at org.jppf.client.balancer.ChannelWrapperRemoteAsync$RemoteReceiver.run(ChannelWrapperRemoteAsync.java:203)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+2021-12-14 21:26:13,838 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-1 - ClassServer] Reconnected to the class server
+2021-12-14 21:26:13,938 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-1 - TasksServer] Attempting connection to the task server at DESKTOP-QMJ16PQ:11111
+2021-12-14 21:26:14,023 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-1 - TasksServer] Reconnected to the JPPF task server
+2021-12-14 21:26:16,814 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised while handling job ClientTaskBundle[bundleId=20, name=Non Blocking Job, jobUuid=F484A863-D630-4023-AD02-0E5F91A6381D, initialTaskCount=1000, taskCount=1000, requeue=false, cancelled=false] on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=1, jobCount=1, resetting=false, bundlerAlgorithm=manual, channel=jppf_discovery-1-1[DESKTOP-QMJ16PQ:11111] (id=1) : ACTIVE (JPPFClientConnectionImpl@6f5e70bb)]
+java.lang.OutOfMemoryError: Java heap space
+2021-12-14 21:26:16,814 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-1 - ClassServer] Attempting connection to the class server at DESKTOP-QMJ16PQ:11111
+2021-12-14 21:26:16,830 [WARN ][org.jppf.client.ClassServerDelegateImpl.run(97)]: [jppf_discovery-1-1 - ClassServer] caught java.net.SocketException: Socket closed, will re-initialise ...
+2021-12-14 21:26:16,830 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-1 - ClassServer] Reconnected to the class server
+2021-12-14 21:26:16,830 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=0, jobCount=0, resetting=false, bundlerAlgorithm=manual, channel=jppf_discovery-1-1[DESKTOP-QMJ16PQ:11111] (id=1) : DISCONNECTED (JPPFClientConnectionImpl@6f5e70bb)]
+java.io.EOFException: could only read 0 bytes out of 4
+	at org.jppf.serialization.SerializationUtils.readToBuf(SerializationUtils.java:453)
+	at org.jppf.serialization.SerializationUtils.readInt(SerializationUtils.java:257)
+	at org.jppf.comm.socket.AbstractSocketWrapper.readInt(AbstractSocketWrapper.java:241)
+	at org.jppf.io.SocketWrapperInputSource.readInt(SocketWrapperInputSource.java:85)
+	at org.jppf.io.IOHelper.readData(IOHelper.java:105)
+	at org.jppf.io.IOHelper.unwrappedData(IOHelper.java:178)
+	at org.jppf.client.BaseJPPFClientConnection.receiveHeader(BaseJPPFClientConnection.java:269)
+	at org.jppf.client.JPPFClientConnectionImpl.receiveHeader(JPPFClientConnectionImpl.java:41)
+	at org.jppf.client.balancer.ChannelWrapperRemoteAsync$RemoteReceiver.run(ChannelWrapperRemoteAsync.java:203)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+2021-12-14 21:26:16,915 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-1 - TasksServer] Attempting connection to the task server at DESKTOP-QMJ16PQ:11111
+2021-12-14 21:26:16,999 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-1 - TasksServer] Reconnected to the JPPF task server
+2021-12-14 21:26:58,423 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised while handling job ClientTaskBundle[bundleId=21, name=Non Blocking Job, jobUuid=F484A863-D630-4023-AD02-0E5F91A6381D, initialTaskCount=1000, taskCount=1000, requeue=false, cancelled=false] on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=1, jobCount=1, resetting=false, bundlerAlgorithm=manual, channel=jppf_discovery-1-1[DESKTOP-QMJ16PQ:11111] (id=1) : ACTIVE (JPPFClientConnectionImpl@6f5e70bb)]
+java.lang.OutOfMemoryError: Java heap space
+2021-12-14 21:26:58,423 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-1 - ClassServer] Attempting connection to the class server at DESKTOP-QMJ16PQ:11111
+2021-12-14 21:26:58,423 [WARN ][org.jppf.client.ClassServerDelegateImpl.run(97)]: [jppf_discovery-1-1 - ClassServer] caught java.net.SocketException: Socket closed, will re-initialise ...
+2021-12-14 21:26:58,423 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=0, jobCount=0, resetting=false, bundlerAlgorithm=manual, channel=jppf_discovery-1-1[DESKTOP-QMJ16PQ:11111] (id=1) : CONNECTING (JPPFClientConnectionImpl@6f5e70bb)]
+java.io.EOFException: could only read 0 bytes out of 4
+	at org.jppf.serialization.SerializationUtils.readToBuf(SerializationUtils.java:453)
+	at org.jppf.serialization.SerializationUtils.readInt(SerializationUtils.java:257)
+	at org.jppf.comm.socket.AbstractSocketWrapper.readInt(AbstractSocketWrapper.java:241)
+	at org.jppf.io.SocketWrapperInputSource.readInt(SocketWrapperInputSource.java:85)
+	at org.jppf.io.IOHelper.readData(IOHelper.java:105)
+	at org.jppf.io.IOHelper.unwrappedData(IOHelper.java:178)
+	at org.jppf.client.BaseJPPFClientConnection.receiveHeader(BaseJPPFClientConnection.java:269)
+	at org.jppf.client.JPPFClientConnectionImpl.receiveHeader(JPPFClientConnectionImpl.java:41)
+	at org.jppf.client.balancer.ChannelWrapperRemoteAsync$RemoteReceiver.run(ChannelWrapperRemoteAsync.java:203)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+2021-12-14 21:26:58,423 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-1 - ClassServer] Reconnected to the class server
+2021-12-14 21:26:58,539 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-1 - TasksServer] Attempting connection to the task server at DESKTOP-QMJ16PQ:11111
+2021-12-14 21:26:58,624 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-1 - TasksServer] Reconnected to the JPPF task server
+2021-12-14 21:27:00,329 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised while handling job ClientTaskBundle[bundleId=22, name=Non Blocking Job, jobUuid=F484A863-D630-4023-AD02-0E5F91A6381D, initialTaskCount=1000, taskCount=1000, requeue=false, cancelled=false] on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=1, jobCount=1, resetting=false, bundlerAlgorithm=manual, channel=jppf_discovery-1-1[DESKTOP-QMJ16PQ:11111] (id=1) : ACTIVE (JPPFClientConnectionImpl@6f5e70bb)]
+java.lang.OutOfMemoryError: Java heap space
+2021-12-14 21:27:00,329 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-1 - ClassServer] Attempting connection to the class server at DESKTOP-QMJ16PQ:11111
+2021-12-14 21:27:00,329 [WARN ][org.jppf.client.ClassServerDelegateImpl.run(97)]: [jppf_discovery-1-1 - ClassServer] caught java.net.SocketException: Socket closed, will re-initialise ...
+2021-12-14 21:27:00,329 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-1 - ClassServer] Reconnected to the class server
+2021-12-14 21:27:00,329 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=0, jobCount=0, resetting=false, bundlerAlgorithm=manual, channel=jppf_discovery-1-1[DESKTOP-QMJ16PQ:11111] (id=1) : CONNECTING (JPPFClientConnectionImpl@6f5e70bb)]
+java.io.EOFException: could only read 0 bytes out of 4
+	at org.jppf.serialization.SerializationUtils.readToBuf(SerializationUtils.java:453)
+	at org.jppf.serialization.SerializationUtils.readInt(SerializationUtils.java:257)
+	at org.jppf.comm.socket.AbstractSocketWrapper.readInt(AbstractSocketWrapper.java:241)
+	at org.jppf.io.SocketWrapperInputSource.readInt(SocketWrapperInputSource.java:85)
+	at org.jppf.io.IOHelper.readData(IOHelper.java:105)
+	at org.jppf.io.IOHelper.unwrappedData(IOHelper.java:178)
+	at org.jppf.client.BaseJPPFClientConnection.receiveHeader(BaseJPPFClientConnection.java:269)
+	at org.jppf.client.JPPFClientConnectionImpl.receiveHeader(JPPFClientConnectionImpl.java:41)
+	at org.jppf.client.balancer.ChannelWrapperRemoteAsync$RemoteReceiver.run(ChannelWrapperRemoteAsync.java:203)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+2021-12-14 21:27:00,413 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-1 - TasksServer] Attempting connection to the task server at DESKTOP-QMJ16PQ:11111
+2021-12-14 21:27:00,498 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-1 - TasksServer] Reconnected to the JPPF task server
+2021-12-14 21:27:12,532 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised while handling job ClientTaskBundle[bundleId=23, name=Non Blocking Job, jobUuid=F484A863-D630-4023-AD02-0E5F91A6381D, initialTaskCount=1000, taskCount=1000, requeue=false, cancelled=false] on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=1, jobCount=1, resetting=false, bundlerAlgorithm=manual, channel=jppf_discovery-1-1[DESKTOP-QMJ16PQ:11111] (id=1) : ACTIVE (JPPFClientConnectionImpl@6f5e70bb)]
+java.lang.OutOfMemoryError: Java heap space
+2021-12-14 21:27:12,532 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(72)]: [client: jppf_discovery-1-1 - ClassServer] Attempting connection to the class server at DESKTOP-QMJ16PQ:11111
+2021-12-14 21:27:12,532 [WARN ][org.jppf.client.ClassServerDelegateImpl.run(97)]: [jppf_discovery-1-1 - ClassServer] caught java.net.SocketException: Socket closed, will re-initialise ...
+2021-12-14 21:27:12,532 [WARN ][org.jppf.client.balancer.ChannelWrapperRemoteAsync.handleThrowable(311)]: Throwable was raised on channel ChannelWrapperRemoteAsync[bundleQueue=0, responseMap=0, jobCount=0, resetting=false, bundlerAlgorithm=manual, channel=jppf_discovery-1-1[DESKTOP-QMJ16PQ:11111] (id=1) : CONNECTING (JPPFClientConnectionImpl@6f5e70bb)]
+java.io.EOFException: could only read 0 bytes out of 4
+	at org.jppf.serialization.SerializationUtils.readToBuf(SerializationUtils.java:453)
+	at org.jppf.serialization.SerializationUtils.readInt(SerializationUtils.java:257)
+	at org.jppf.comm.socket.AbstractSocketWrapper.readInt(AbstractSocketWrapper.java:241)
+	at org.jppf.io.SocketWrapperInputSource.readInt(SocketWrapperInputSource.java:85)
+	at org.jppf.io.IOHelper.readData(IOHelper.java:105)
+	at org.jppf.io.IOHelper.unwrappedData(IOHelper.java:178)
+	at org.jppf.client.BaseJPPFClientConnection.receiveHeader(BaseJPPFClientConnection.java:269)
+	at org.jppf.client.JPPFClientConnectionImpl.receiveHeader(JPPFClientConnectionImpl.java:41)
+	at org.jppf.client.balancer.ChannelWrapperRemoteAsync$RemoteReceiver.run(ChannelWrapperRemoteAsync.java:203)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+2021-12-14 21:27:12,532 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(78)]: [client: jppf_discovery-1-1 - ClassServer] Reconnected to the class server
+2021-12-14 21:27:12,632 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(65)]: [client: jppf_discovery-1-1 - TasksServer] Attempting connection to the task server at DESKTOP-QMJ16PQ:11111
+2021-12-14 21:27:12,732 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(82)]: [client: jppf_discovery-1-1 - TasksServer] Reconnected to the JPPF task server

@@ -4,34 +4,37 @@ import java.util.Arrays;
 
 public class Main {
 
-    public static Integer[] mult(Matrix matrix, Integer[] vector, Integer rowCount, Integer colCount) {
-        final Integer[] resultVec = new Integer[] {0, 0, 0};
-
-        for (int i = 0; i < rowCount; i++) {
+    public static Integer[] mult(Matrix matrix, Integer[] vector) {
+        final Integer[] resultVec = new Integer[matrix.getColCount()];
+        final Integer rowCount = matrix.getRowCount();
+        final Integer colCount = matrix.getColCount();
+        int sum;
+        for (int i = 0; i < rowCount; i++) { // Умножение матрицы на столбец
+            sum = 0;
             for (int j = 0; j < colCount; j++) {
-                resultVec[i] += matrix.getElem(i, j) * vector[j];
+                sum += matrix.getElem(i, j) * vector[j];
             }
+            resultVec[i] = sum;
         }
-
         return resultVec;
     }
 
     public static void main(String[] args) {
-        /*Matrix m1 = new Matrix(3, 3);
-        Matrix m2 = new Matrix(3, 3);*/
+        Integer[] res = new Integer[0];
 
-        Integer[][] matr = new Integer[][] {{2, 3, 8}, {4, 1, 5}, {7, 3, 2}};
-        Integer[] vec = new Integer[]{3, 7, 2};
-        Matrix mt = new Matrix(matr);
+        Integer[][] m1 = new Integer[][] {{2, 3, 8}, {4, 1, 5}, {7, 3, 2}};
+        Integer[][] m2 = new Integer[][] {{3, 4, 5}, {7, 1, 2}, {2, 4, 1}};
 
-        Integer[] res = mult(mt, vec, mt.getRowCount(), mt.getColCount());
+        Matrix firstMatrix = new Matrix(1000, 1000, 100000);
+        Matrix secondMatrix = new Matrix(1000, 1000, 100000);
+
+        final long startTime = System.currentTimeMillis();
+        for (int i = 0; i < secondMatrix.getColCount(); i++) {
+             res = mult(firstMatrix, secondMatrix.getColumnByIndex(i));
+        }
+        final long endTime = System.currentTimeMillis();
+        System.out.println("Total execution time: " + (endTime - startTime));
+
         System.out.println(Arrays.toString(res));
-
-
-     /*   m1.printMatrix();
-        m2.printMatrix();
-        System.out.println();
-        Integer[][] result = Matrix.multiplyMatrices(m1.getMatr(), m2.getMatr());
-        System.out.println(Arrays.deepToString(result));*/
     }
 }

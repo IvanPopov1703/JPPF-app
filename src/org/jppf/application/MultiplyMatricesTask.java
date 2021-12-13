@@ -1,4 +1,4 @@
-package org.jppf.application.template;
+package org.jppf.application;
 
 import matrix.Matrix;
 import org.jppf.node.protocol.AbstractTask;
@@ -21,6 +21,7 @@ public class MultiplyMatricesTask extends AbstractTask<Integer[]> {
 
     /**
      * Конструктор с параметрами
+     *
      * @param matrix первая матрица, которая будет умножаться на столбец
      * @param vector столбец второй матрицы
      */
